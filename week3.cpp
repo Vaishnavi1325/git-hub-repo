@@ -1,42 +1,47 @@
 //question 1
 #include <iostream>
-using namespace std;
+#include <string>
 
-int main() {
-    int N, sum = 0;
-    cin >> N;
-    for (int i = 1; i <= N; i++) {
-        sum += i;
-    }
-    cout << sum << endl;
-    return 0;
+int stringLength(const std::string &str) {
+    return str.length();
 }
 
+int main() {
+    std::string str1 = "Hello, World!";
+    std::cout << stringLength(str1) << std::endl;
+    return 0;
+}
 //question 2
 #include <iostream>
-using namespace std;
+#include <string>
 
-int main() {
-    int N;
-    long long factorial = 1;
-    cin >> N;
-    for (int i = 1; i <= N; i++) {
-        factorial *= i;
+int countCharacter(const std::string &str, char ch) {
+    int count = 0;
+    for (char c : str) {
+        if (c == ch) {
+            count++;
+        }
     }
-    cout << factorial << endl;
-    return 0;
+    return count;
 }
 
+int main() {
+    std::string str = "Hello, World!";
+    char ch = 'l';
+    std::cout << countCharacter(str, ch) << std::endl;
+    return 0;
+}
 //question 3
 #include <iostream>
-using namespace std;
+#include <string>
 
-int main() {
-    int N;
-    cin >> N;
-    for (int i = 1; i <= 10; i++) {
-        cout << N << " * " << i << " = " << N * i << endl;
-    }
-    return 0;
+std::string concatenateStrings(const std::string &str1, const std::string &str2) {
+    return str1 + str2;
 }
 
+int main() {
+    std::string str1 = "Hello, ";
+    std::string str2 = "World!";
+    std::cout << concatenateStrings(str1, str2) << std::endl;
+    return 0;
+}
